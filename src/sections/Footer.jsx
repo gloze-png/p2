@@ -3,7 +3,7 @@ import { FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import { SiGithub, SiHashnode } from "react-icons/si";
 import emailjs from "emailjs-com";
 
-const FooterContact = () => {
+const Footer = () => {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
@@ -106,8 +106,8 @@ const FooterContact = () => {
             </a>
             <a href="https://gloryope.hashnode.dev" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white text-2xl">
               <SiHashnode />
-              </a>
-               <a href="https://github.com/gloze-png" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white text-2xl">
+            </a>
+            <a href="https://github.com/gloze-png" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white text-2xl">
               <SiGithub />
             </a>
           </div>
@@ -122,4 +122,4 @@ const FooterContact = () => {
   );
 };
 
-export default FooterContact;
+export default Footer;

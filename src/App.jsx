@@ -1,7 +1,7 @@
 import NavBar from "./components/NavBar"
 import Experience from "./sections/Experience"
 import FeatureCards from "./sections/FeatureCards"
-import FooterContact from "./sections/footer"
+import Footer from "./sections/footer"
 import Hero from "./sections/Hero"
 import ShowcaseSection from "./sections/ShowcaseSection"
 import TechStack from "./sections/TechStack"
@@ -15,7 +15,7 @@ const App = () => {
    <FeatureCards/>
    <Experience />
    <TechStack />
-   <FooterContact/>
+   <Footer />
    </>
   )
 }
