@@ -5,7 +5,7 @@ import { words } from "../constant"
 import {useGSAP} from '@gsap/react';
 import gsap from 'gsap';
 import AnimatedCounter from "../components/AnimatedCounter";
-import Github from "../api/github";
+import Github from "../api/Github";
 const Hero = () => {
   useGSAP(() => {
     gsap.fromTo('.hero-text, .h1, .h2, .p',{
