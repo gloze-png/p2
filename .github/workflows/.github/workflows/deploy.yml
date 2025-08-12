@@ -1,0 +1,39 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main  # or your deployment branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      # Fix footer filename case before building
+      - name: Ensure lowercase footer filename
+        run: |
+          if [ -f src/sections/Footer.jsx ]; then
+            mv src/sections/Footer.jsx src/sections/footer.jsx
+          fi
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ AStMMCBixj8xBOCD2CeCVDHt }}
+          vercel-org-id: ${{ team_ARqkebGbzzo7E2i0Uqx3O0YW }}
+          vercel-project-id: ${{ prj_CIE8jI0jbxPWpKjSAdYCjpBTn4A8 }}
+          working-directory: ./
